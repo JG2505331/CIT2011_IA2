@@ -20,9 +20,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--white);
     background-color: var(--background);
-    background-image:
-        radial-gradient(ellipse at 15% 15%, #321052 0%, transparent 42%),
-        radial-gradient(ellipse at 85% 75%, #241047 0%, transparent 40%);
+    background-image: none;
     display: flex;
     flex-direction: column;
     line-height: 1.6;
@@ -73,11 +71,11 @@ main {
 .event-label {
     display: inline-block;
     margin-bottom: 24px;
-    padding: 8px 16px;
-    border: 1px solid var(--border);
-    border-radius: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
     color: #d8b4fe;
-    background: rgba(168, 85, 247, 0.08);
+    background: transparent;
     font-size: 0.75rem;
     font-weight: bold;
     letter-spacing: 2px;
@@ -88,10 +86,7 @@ main {
     font-size: clamp(2.5rem, 6vw, 4.8rem);
     line-height: 1.12;
     letter-spacing: -2px;
-    background: linear-gradient(90deg, #ffffff, #d8b4fe, #f0abfc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+    color: var(--white);
 }
 
 .hero-description {
@@ -152,7 +147,7 @@ main {
     border: 1px solid transparent;
     border-radius: 10px;
     color: white;
-    background: linear-gradient(100deg, #9333ea, #db2777);
+    background-color: var(--purple);
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
@@ -297,11 +292,7 @@ main {
     text-align: left;
     border: 1px solid rgba(216, 180, 254, 0.5);
     border-radius: 18px;
-    background: linear-gradient(
-        135deg,
-        rgba(168, 85, 247, 0.16),
-        rgba(23, 16, 43, 0.95)
-    );
+    background-color: var(--surface);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
