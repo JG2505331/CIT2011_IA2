@@ -1,59 +1,122 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Your Coding Conf Ticket</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/style.css">
+
     <script src="../js/ticket.js" defer></script>
 </head>
+
 <body>
 
-    <header>
-        <h1>Coding Conf 2026</h1>
-        <p>Your ticket is ready!</p>
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Coding Conf homepage">
+            <img src="../assets/images/logo-full.svg" alt="Coding Conf">
+        </a>
     </header>
 
     <main>
-        <section class="ticket">
-            <h2>Congrats, <span id="ticketName">Guest</span>! Your ticket is ready.</h2>
+        <section class="hero">
 
-            <div class="ticket-details">
-                <p class="ticket-label">EVENT</p>
-                <h3>Coding Conf 2026</h3>
+            <div class="ticket-heading">
+                <h1>
+                    Congrats,
+                    <span id="ticketName" class="gradient-text">Guest</span>!
+                    Your ticket is ready.
+                </h1>
 
-                <p class="ticket-label">DATE</p>
-                <p>October 26, 2026</p>
+                <p>
+                    We've emailed your ticket details to
+                    <span id="ticketEmail"></span>.
+                </p>
 
-                <p class="ticket-label">LOCATION</p>
-                <p>Papine, Kingston, Jamaica</p>
-
-                <p class="ticket-label">TICKET</p>
-                <p id="ticketNumber">#01609</p>
+                <p class="ticket-update-message">
+                    We'll send updates in the run-up to the event.
+                </p>
             </div>
 
-            <div class="attendee-details">
-                <img id="ticketAvatar" src="" alt="Your profile picture">
+            <section class="ticket" aria-label="Conference ticket">
 
-                <div>
-                    <h3 id="ticketFullName">Your Name</h3>
+                <div class="ticket-top">
+                    <img
+                        src="../assets/images/logo-mark.svg"
+                        alt=""
+                        class="ticket-logo"
+                    >
 
-                    <p class="ticket-label">GITHUB</p>
-                    <p>
-                        <a id="ticketGithub" href="#" target="_blank" rel="noopener noreferrer">@username</a>
-                    </p>
+                    <div>
+                        <h2 class="ticket-event-name">Coding Conf 2026</h2>
 
-                    <p class="ticket-label">EMAIL</p>
-                    <p id="ticketEmail">your@email.com</p>
+                        <p class="ticket-event-date">
+                            October 26, 2026
+                        </p>
+
+                        <p class="ticket-location">
+                            Papine, Kingston, Jamaica
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <hr class="ticket-divider">
+
+                <div class="attendee-details">
+                    <img
+                        id="ticketAvatar"
+                        src="../assets/images/image-avatar.jpg"
+                        alt="Attendee profile picture"
+                    >
+
+                    <div class="attendee-information">
+                        <h2 id="ticketFullName">Your Name</h2>
+
+                        <p>
+                            <img
+                                src="../assets/images/icon-github.svg"
+                                alt=""
+                                aria-hidden="true"
+                            >
+
+                            <a
+                                id="ticketGithub"
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                @username
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <p class="ticket-number" id="ticketNumber">
+                    #01609
+                </p>
+
+            </section>
+
             <div class="ticket-back">
-                <a href="index.html" class="register-button">← Back to Home</a>
+                <a href="index.html" class="register-button">
+                    Back to Home
+                </a>
             </div>
 
+        </section>
     </main>
 
+    <footer class="site-footer">
+        <p>&copy; 2026 Coding Conf. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
