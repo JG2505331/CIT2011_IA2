@@ -49,6 +49,12 @@ a {
     text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 4px;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -75,7 +81,7 @@ img {
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -152,7 +158,7 @@ img {
 }
 
 .form-heading h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     line-height: 1.2;
     margin-bottom: 15px;
 }
@@ -261,9 +267,7 @@ img {
 }
 
 .form-help {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: block;
     margin-top: 10px;
     color: var(--medium-grey);
     font-size: 0.85rem;
@@ -271,9 +275,10 @@ img {
 }
 
 .form-help img {
+    float: left;
     width: 16px;
     height: 16px;
-    flex-shrink: 0;
+    margin-right: 8px;
 }
 
 .error-message {
@@ -306,9 +311,11 @@ img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    border: none;
-    border-radius: 0;
-    background-color: transparent;
+    background-color: rgba(23, 16, 43, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
     text-align: left;
 }
 
