@@ -1,4 +1,3 @@
-
 const savedRegistration = localStorage.getItem("registration");
 
 if (savedRegistration === null) {
@@ -7,11 +6,12 @@ if (savedRegistration === null) {
     const registration = JSON.parse(savedRegistration);
 
     document.getElementById("ticketName").textContent = registration.fullName;
+
     document.getElementById("ticketFullName").textContent = registration.fullName;
 
-    const githubLink = document.getElementById("ticketGithub");
     const githubUsername = registration.github.replace(/^@/, "");
 
+    const githubLink = document.getElementById("ticketGithub");
     githubLink.textContent = "@" + githubUsername;
     githubLink.href = "https://github.com/" + githubUsername;
 
